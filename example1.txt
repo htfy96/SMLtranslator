@@ -1,0 +1,27 @@
+.DATA
+X 20
+Z 21
+W 22
+Y 23
+.CODE
+.BASE 00
+lb 0,00
+lm 1,x
+lm 2,y
+
+
+J 1,XZERO
+Lm 3,x
+
+
+Addc 2,3
+
+J ENDOFCOND
+XZERO: lm 3,w
+
+
+Addc 2,3
+
+ENDOFCOND: mov 2,z
+Halt
+.ENTRY 00

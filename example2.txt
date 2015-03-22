@@ -1,0 +1,19 @@
+;Program for unit 2,review 28, copying memory
+.DATA
+source 39
+target 3b
+.CODE
+.BASE 30
+lb 0,3
+lb 1,1
+lb 2,0
+lb 3,10
+loop:lm 4,00; source is the last number
+mov 4,10; target is the last number
+addc 2,1
+addc 3,1
+mov 2,source
+mov 3,target
+j 2,endofprog
+j loop
+endofprog:halt
